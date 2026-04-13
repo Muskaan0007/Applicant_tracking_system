@@ -1,6 +1,6 @@
 # 🎯 ATS — AI-Powered Applicant Tracking System
 
-Full-stack ATS with React + Django REST + MySQL + Grok AI Agent.
+Full-stack ATS with React + Django REST + MySQL + groq AI Agent.
 
 ---
 
@@ -44,7 +44,7 @@ backend/
   users/         ← Custom User, JWT auth
   jobs/          ← Job CRUD
   applications/  ← Resume upload, applications
-  services/      ← Grok AI agent, PDF parser
+  services/      ← groq AI agent, PDF parser
   media/         ← Uploaded PDFs (auto-created)
 
 frontend/src/
