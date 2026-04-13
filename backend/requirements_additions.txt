@@ -1,0 +1,4 @@
+# Add these to your existing requirements.txt
+groq
+duckduckgo-search
+chromadb
