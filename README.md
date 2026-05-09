@@ -7,11 +7,13 @@ Full-stack ATS with React + Django REST + MySQL + Grok AI Agent.
 ## 🚀 Quick Start
 
 ### 1. MySQL Database
+
 ```sql
 CREATE DATABASE ats_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 ### 2. Backend
+
 ```bash
 cd backend
 python -m venv venv
@@ -24,14 +26,17 @@ python manage.py migrate
 python manage.py createsuperuser  # optional
 python manage.py runserver
 ```
+
 → Runs at **http://localhost:8000**
 
 ### 3. Frontend
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
+
 → Runs at **http://localhost:3000**
 
 ---
@@ -77,26 +82,27 @@ Saved to DB → shown in dashboard
 
 ## 🔑 API Reference
 
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| POST | `/api/auth/register/` | No | Register |
-| POST | `/api/auth/login/` | No | Get JWT tokens |
-| GET | `/api/auth/me/` | JWT | Current user |
-| GET | `/api/jobs/` | No | List open jobs |
-| POST | `/api/jobs/` | Recruiter | Create job |
-| PUT | `/api/jobs/:id/` | Recruiter | Update job |
-| DELETE | `/api/jobs/:id/` | Recruiter | Delete job |
-| GET | `/api/jobs/my/` | Recruiter | My jobs |
-| POST | `/api/applications/apply/` | Candidate | Apply + upload PDF |
-| GET | `/api/applications/mine/` | Candidate | My applications |
-| GET | `/api/applications/job/:id/` | Recruiter | Job applicants |
-| PATCH | `/api/applications/:id/status/` | Recruiter | Update status |
+| Method | Endpoint                        | Auth      | Description        |
+| ------ | ------------------------------- | --------- | ------------------ |
+| POST   | `/api/auth/register/`           | No        | Register           |
+| POST   | `/api/auth/login/`              | No        | Get JWT tokens     |
+| GET    | `/api/auth/me/`                 | JWT       | Current user       |
+| GET    | `/api/jobs/`                    | No        | List open jobs     |
+| POST   | `/api/jobs/`                    | Recruiter | Create job         |
+| PUT    | `/api/jobs/:id/`                | Recruiter | Update job         |
+| DELETE | `/api/jobs/:id/`                | Recruiter | Delete job         |
+| GET    | `/api/jobs/my/`                 | Recruiter | My jobs            |
+| POST   | `/api/applications/apply/`      | Candidate | Apply + upload PDF |
+| GET    | `/api/applications/mine/`       | Candidate | My applications    |
+| GET    | `/api/applications/job/:id/`    | Recruiter | Job applicants     |
+| PATCH  | `/api/applications/:id/status/` | Recruiter | Update status      |
 
 ---
 
 ## ⚠️ Decorator Rule (Django REST Framework)
 
 Always in this order:
+
 ```python
 @api_view(['POST'])          # 1st
 @permission_classes([...])   # 2nd
